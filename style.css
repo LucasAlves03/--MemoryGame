@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(125, 80, 248);
+    background-color: rgb(5, 126, 238);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -15,8 +15,6 @@ img{
     width: 100px;
     border: 2px solid  white;
 }
-
-
 #grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -66,12 +64,6 @@ img{
     border-radius: 8px;
     padding: 10px;
 }
-#start-btn:hover,
-#reset-btn:hover{
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-}
 .modal {
     display: none;
     position: fixed;
@@ -101,7 +93,6 @@ img{
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: black;
@@ -109,18 +100,36 @@ img{
     cursor: pointer;
 }
 @media screen and (max-width:600px){
-    body{
-        margin-top: 25%;
-        height: 60vh;
-
+    #game-container{
+        width: 240px;
+        padding: 10px;
+        height: auto;
+    }
+    h1{
+        font-size: 19pt;
     }
     #grid{
         grid-template-columns: repeat(3, 1fr); /* Altere para 3 colunas iguais */
         grid-template-rows: repeat(3, 1fr); 
-        gap: 5px;
+        gap: 10px;
+    }
+    .modal{
+        background-color: #212529e8;
     }
     .modal-content{
-        margin-top: 20vh;
+        margin-top: 10vh;
+        width: 250px;
+    }
+    img{
+        width:100%;
+    }
+    .score, #timer{
+        font-size: 13pt;
+    }
+    #start-btn,
+    #reset-btn{
+        font-size: 10pt;
+        width: 90px;
     }
 }
 
